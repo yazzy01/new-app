@@ -1,13 +1,43 @@
 {
-  "name": "new_app",
-  "private": true,
-  "version": "0.0.0",
+  "name": "react-modern-showcase",
+  "version": "3.0.0",
+  "description": "Modern React 19 application showcasing latest features, best practices, and enterprise-grade architecture",
+  "author": {
+    "name": "Yassir Rzigui",
+    "email": "rziguiyassir@gmail.com",
+    "url": "https://github.com/yazzy01"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yazzy01/new_app.git"
+  },
+  "keywords": [
+    "react",
+    "vite",
+    "modern-react",
+    "react-19",
+    "enterprise",
+    "showcase",
+    "best-practices",
+    "frontend"
+  ],
+  "license": "MIT",
+  "private": false,
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "lint:fix": "eslint . --fix",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "format": "prettier --write src/**/*.{js,jsx,ts,tsx,css,md}",
+    "format:check": "prettier --check src/**/*.{js,jsx,ts,tsx,css,md}",
+    "type-check": "tsc --noEmit",
+    "analyze": "vite-bundle-analyzer dist",
+    "serve": "vite preview --port 3000",
+    "deploy": "npm run build && npx vercel --prod"
   },
   "dependencies": {
     "react": "^19.1.0",
